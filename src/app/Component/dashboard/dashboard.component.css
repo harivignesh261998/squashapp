@@ -1,0 +1,27 @@
+.container
+{
+ width: 500px;
+  /* height: 600px; */
+  margin: 30px auto;
+  background: #fff;
+  position: relative;
+   /*width: 600px;
+  height: 450px;
+  margin: 50px auto;
+  background: #fff;
+  position: relative; */
+ }  
+ .container h1 
+ {
+   margin: 0;
+   padding: 0;
+   font-family: arial;
+   font-size: 1em;
+   text-transform: uppercase;
+   text-align: center;
+   position: relative;
+   top: 50%;
+   color:rgb(15, 15, 3);
+   transform: translate(-50%);
+
+ }

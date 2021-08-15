@@ -1,0 +1,27 @@
+.form-control:focus {
+    /* color: #212529;
+    background-color: #fff; */
+    border-color: #ff7700;
+    /* border-top-color: rgb(134, 183, 254);
+    border-right-color: rgb(134, 183, 254);
+    border-bottom-color: rgb(134, 183, 254);
+    border-left-color: rgb(134, 183, 254); */
+    /* outline: none;
+    outline-color: initial;
+    outline-style: initial;
+    outline-width: 0px; */
+    box-shadow: 0 0 0 0.5px rgb(255 211 49 / 75%); 
+} 
+.focus:focus {
+    background-color:#f7ccba ;
+}
+.focus{
+    color: #ff7700;
+    border: none;
+    outline: none;   
+    box-shadow: 0 0 0 0px rgb(255 211 49 / 75%); 
+}
+.focus:active{
+    color: #ff7700;
+    background-color:#f7ccba ;
+}

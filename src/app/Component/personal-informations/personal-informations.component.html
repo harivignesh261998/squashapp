@@ -1,0 +1,67 @@
+  <form [formGroup]= "personalForm"  class=" border border-light p-5">
+
+      <div class="form-row mb-4">
+          <label>Full Name</label>
+          <div class="col">
+              <input  formControlName="fullName" type="text" id="FormFullName" class="form-control">
+          </div>
+      </div>
+ <!--Gender-->
+ <div class="form-row mb-4">
+    <label>Gender</label>
+    <div>
+        <!-- <label class="btn btn-light active"> -->
+          <!-- <input type="radio" name="options" id="option1"  checked> Male -->
+          <button (click)= "gender('Male')" class="btn focus" type="button"> Male </button>
+          <button (click)= "gender('Female')" class="btn focus" type="button"> Female </button>
+          <button (click)= "gender('Others')" class="btn focus" type="button"> Others </button>
+        <!-- </label> -->
+        <!-- <label class="btn btn-light">
+
+          <input type="radio" name="options" id="option2" > Female -->
+        <!-- </label>
+        <label class="btn btn-light">
+          <input type="radio" name="options" id="option3" > Others
+        </label> -->
+      </div>
+    </div>
+<!--Country-->
+<div class="form-row mb-4">
+    <label>Country</label>
+    <select (change)= "selectcountry($event.target.value)" class="form-control" aria-label="Default select example">
+      
+      <option value="India" selected>India</option>
+      <option value="America">America</option>
+      <option value="Europe">Europe</option>
+    </select>
+</div>
+
+<!--State-->
+<div class="form-row mb-4">
+  <label>State</label>
+  <select (change)= "selectstate($event.target.value)" class="form-control" aria-label="Default select example">
+  
+    <option value="Tamilnadu" selected>Tamilnadu</option>
+    <option value="Kerla">Kerla</option>
+    <option value="Andhra">Andhra</option>
+  </select>
+    
+</div>
+
+<!--Phone Number-->
+<div class="form-row mb-4">
+    <label>Phone</label>
+    <div class="col">
+        <input formControlName="phoneNumber" type="number" id="FormPhone" class="form-control">
+    </div>
+</div>
+<!--Next-->
+
+<div class="col-md-12">
+  <button (click)= "next()" type="button" [disabled]="personalForm.invalid" style="width: 100%; background-color:#ff7700; border: none; color: white; padding: 5px;">Next</button>
+</div>
+ 
+<!--Login ?-->
+<p class="text-center mt-3">Already have an account?</p>
+<p class="text-center">  <span class="text-danger">Log in </span></p>
+

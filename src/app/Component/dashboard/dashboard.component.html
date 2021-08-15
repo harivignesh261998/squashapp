@@ -1,0 +1,12 @@
+<div class="sample">
+    <app-navbar></app-navbar>
+    <h2 class="text-center mt-4">{{mainText}}</h2>
+    <h6 class="text-center">{{subText}}</h6>
+
+    <div class="container" [ngStyle] = "{'height': otp? '450px' : '600px'}" >
+
+      <app-personal-informations *ngIf="personalForm" (myOutput) = getValue($event)></app-personal-informations> 
+      <app-company-informations *ngIf="companyForm" (myOutput) = getValue($event)></app-company-informations>
+      <app-email-verification *ngIf="otp" (myOutput) = getValue($event)></app-email-verification>
+    </div>
+</div>

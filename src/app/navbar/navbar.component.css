@@ -1,0 +1,23 @@
+/* .spacer {
+    display: flex;  
+    align-items: center;
+    justify-content: start; */
+    /* flex: 1 1 auto; */
+/* } */
+
+.mat-toolbar.mat-primary {
+    background: #093e5c!important;
+    color: #fff !important;
+}
+
+/* .sample
+{
+    background: rgba(124, 20, 20, 0.308);
+    padding: 0;
+    margin: 0;
+} */
+
+.container
+{
+text-align:center;
+}
