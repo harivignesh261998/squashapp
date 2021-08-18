@@ -6,26 +6,26 @@
          <label>Enter your code</label>
          <div class="row mt-3">
             <div class="col-md-2">
-                <input formControlName="number1" type="text" id="Formcode" class="form-control " style="width: 60px;  height: 60px;" >
+                <input (input)="inputChange($event.target.value, 'box2')" formControlName="number1" type="text" id="box1" class="form-control " style="width: 60px;  height: 60px;" >
                 
             </div>
             <div class="col-md-2">
-                <input formControlName="number2" type="text" id="Formcode" class="form-control ml-5 " style="width: 60px; margin-left: 15px; height: 60px;">
+                <input (input)="inputChange($event.target.value, 'box3')"formControlName="number2" type="text" id="box2" class="form-control ml-5 " style="width: 60px; margin-left: 15px; height: 60px;">
                 
             </div>
             <div class="col-md-2">
-                <input formControlName="number3" type="text" id="Formcode" class="form-control " style="width: 60px; margin-left: 35px; height: 60px;">
+                <input (input)="inputChange($event.target.value, 'box4')" formControlName="number3" type="text" id="box3" class="form-control ml-5 " style="width: 60px; margin-left: 35px; height: 60px;">
                 
             </div>
             <div class="col-md-2">
-                <input formControlName="number4" type="text" id="Formcode" class="form-control "style="width: 60px; margin-left: 55px; height: 60px;">
+                <input (input)="inputChange($event.target.value, 'box5')" formControlName="number4" type="text" id="box4" class="form-control ml-5 "style="width: 60px; margin-left: 55px; height: 60px;">
                 
             </div>
             <div class="col-md-2">
-                <input formControlName="number5" type="text" id="Formcode" class="form-control " style="width: 60px; margin-left: 75px; height: 60px;">
+                <input (input)="inputChange($event.target.value, 'box5')" formControlName="number5" type="text" id="box5" class="form-control " style="width: 60px; margin-left: 75px; height: 60px;">
                 
             </div>
-           
+            
           </div>
        
 

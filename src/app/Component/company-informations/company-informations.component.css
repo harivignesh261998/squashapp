@@ -12,3 +12,15 @@
     outline-width: 0px; */
     box-shadow: 0 0 0 0.5px rgb(255 211 49 / 75%); 
 }
+
+input[type="file"] {
+    visibility: hidden;
+}
+
+.image-preview {
+    height: 10rem;
+    width: 100%;
+}
+.image-preview img {
+    height: 100%;
+}

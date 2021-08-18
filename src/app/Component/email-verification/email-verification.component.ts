@@ -13,7 +13,7 @@ export class EmailVerificationComponent implements OnInit {
     number4: new FormControl(''),
     number5: new FormControl('')
     })
-
+    otp="";
     @Output() myOutput: EventEmitter<Number>= new EventEmitter
   constructor() { }
 
@@ -23,7 +23,7 @@ export class EmailVerificationComponent implements OnInit {
   }
  finish() {
     console.log(this.emailForm.value)
-    localStorage.setItem("emailForm",JSON.stringify(this.emailForm.value))
+    localStorage.setItem("emailForm", this.otp)
      this.myOutput.emit(4)
   }
   back() {
@@ -31,4 +31,13 @@ export class EmailVerificationComponent implements OnInit {
 
     this.myOutput.emit(2)
   }
+ inputChange(value,id){
+ if(value.length === 1){
+   this.otp=this.otp+value;
+   document.getElementById(id).focus()
+ }
+
+ }
+  
 }
+

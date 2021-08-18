@@ -12,9 +12,22 @@ export class PersonalInformationsComponent implements OnInit {
    country: new FormControl('', Validators.required),
    state: new FormControl('', Validators.required),
    phoneNumber: new FormControl('', Validators.required)
-
-
  })
+ code = '';
+ country = [
+  {
+    name: 'India',
+    code: '+91'
+  },
+  {
+    name: 'Ameria',
+    code: '+80'
+  },
+  {
+    name: 'London',
+    code: '+43'
+  }
+ ]
  @Output() myOutput: EventEmitter<Number>= new EventEmitter
 
   constructor() { }
@@ -35,6 +48,8 @@ export class PersonalInformationsComponent implements OnInit {
     this.personalForm.patchValue({
       country:countrys
     })
+    const country = this.country.find(x => x.name === countrys);
+    this.code = country.code;
   }
 
   gender(g){

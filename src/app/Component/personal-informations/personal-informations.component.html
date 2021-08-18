@@ -28,12 +28,26 @@
 <!--Country-->
 <div class="form-row mb-4">
     <label>Country</label>
-    <select (change)= "selectcountry($event.target.value)" class="form-control" aria-label="Default select example">
+    <div class="row">
+      <div class="col-md-3">
+        <select style="border-right: none;" (change)= "selectcountry($event.target.value)" class="form-control" aria-label="Default select example">
       
-      <option value="India" selected>India</option>
-      <option value="America">America</option>
-      <option value="Europe">Europe</option>
-    </select>
+          <option value="India" selected>In</option>
+          <option value="America">Am</option>
+          <option value="Europe">Eu</option>
+        </select>
+      </div>
+      <div class="col-md-9" style="margin-left: -28px">
+        <select  style="border-left: none; width: 308px;" (change)= "selectcountry($event.target.value)" class="form-control" aria-label="Default select example">
+      
+          <option *ngFor="let count of country" [value]="count.name">{{ count.name }}</option>
+          <!-- <option value="India" selected>India</option>
+          <option value="America">America</option>
+          <option value="Europe">Europe</option> -->
+        </select>
+      </div>
+    </div>
+    
 </div>
 
 <!--State-->
@@ -51,9 +65,23 @@
 <!--Phone Number-->
 <div class="form-row mb-4">
     <label>Phone</label>
-    <div class="col">
-        <input formControlName="phoneNumber" type="number" id="FormPhone" class="form-control">
+    <div class="row">
+      <div class="col-md-3">
+        <select style="border-right: none;" (change)= "selectstate($event.target.value)" class="form-control" aria-label="Default select example">
+  
+          <!-- <option value="+91" selected>+91</option>
+          <option value="+80">+80</option>
+          <option value="+43">+43</option> -->
+          <option>{{ code }}</option>
+        </select>
+      </div>
+      <div class="col-md-9" style="margin-left: -28px">
+        <input formControlName="phoneNumber" style="border-left: none; width: 308px;" type="number" id="FormPhone" class="form-control">
+      </div>
     </div>
+    <!-- <div class="col">
+        <input formControlName="phoneNumber" type="number" id="FormPhone" class="form-control">
+    </div> -->
 </div>
 <!--Next-->
 
