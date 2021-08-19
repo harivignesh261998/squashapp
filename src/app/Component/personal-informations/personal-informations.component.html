@@ -3,7 +3,7 @@
       <div class="form-row mb-4">
           <label>Full Name</label>
           <div class="col">
-              <input  formControlName="fullName" type="text" id="FormFullName" class="form-control">
+              <input  formControlName="fullName" type="text" id="FormFullName" class="form-control" required>
           </div>
       </div>
  <!--Gender-->
@@ -30,15 +30,15 @@
     <label>Country</label>
     <div class="row">
       <div class="col-md-3">
-        <select style="border-right: none;" (change)= "selectcountry($event.target.value)" class="form-control" aria-label="Default select example">
+        <select style="border-right: none;" (change)= "selectcountry($event.target.value)" class="form-control" aria-label="Default select example" required>
       
-          <option value="India" selected>In</option>
-          <option value="America">Am</option>
-          <option value="Europe">Eu</option>
+          <option value="India" selected>{{countrySh}}</option>
+          <!-- <option value="America">Am</option>
+          <option value="Europe">Eu</option> -->
         </select>
       </div>
       <div class="col-md-9" style="margin-left: -28px">
-        <select  style="border-left: none; width: 308px;" (change)= "selectcountry($event.target.value)" class="form-control" aria-label="Default select example">
+        <select  style="border-left: none; width: 308px;" (change)= "selectcountry($event.target.value)" class="form-control" aria-label="Default select example" required>
       
           <option *ngFor="let count of country" [value]="count.name">{{ count.name }}</option>
           <!-- <option value="India" selected>India</option>

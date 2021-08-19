@@ -6,6 +6,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   styleUrls: ['./personal-informations.component.css']
 })
 export class PersonalInformationsComponent implements OnInit {
+  countrySh;
  personalForm = new FormGroup({
    fullName: new FormControl('', Validators.required),
    gender: new FormControl('', Validators.required),
@@ -17,15 +18,18 @@ export class PersonalInformationsComponent implements OnInit {
  country = [
   {
     name: 'India',
-    code: '+91'
+    code: '+91',
+    sh:'IN'
   },
   {
-    name: 'Ameria',
-    code: '+80'
+    name: 'America',
+    code: '+80',
+    sh:'USA'
   },
   {
-    name: 'London',
-    code: '+43'
+    name: 'Europe',
+    code: '+43',
+    sh:'EU'
   }
  ]
  @Output() myOutput: EventEmitter<Number>= new EventEmitter
@@ -33,7 +37,9 @@ export class PersonalInformationsComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(localStorage.getItem("personalForm"))
+    console.log(localStorage.getItem("personalForm"));
+    this.countrySh = this.country[0].sh;
+    this.code = this.country[0].code;
   }
   selectstate(states){
     console.log(states)
@@ -50,6 +56,7 @@ export class PersonalInformationsComponent implements OnInit {
     })
     const country = this.country.find(x => x.name === countrys);
     this.code = country.code;
+    this.countrySh = country.sh;
   }
 
   gender(g){
